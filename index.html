@@ -5,113 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departamento de Justicia - Los Santos</title>
     <link rel="icon" type="image/png" href="img/galeria/galeriaround2/doj_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">
-            <img src="img/galeria/galeriaround2/doj_logo.png" alt="DOJ Logo">
-            <span class="nav-logo-text">Departamento de Justicia</span>
-        </a>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="img/galeria/galeriaround2/doj_logo.png" alt="DOJ Logo">
+                <span class="nav-logo-text">Departamento de Justicia</span>
+            </a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
         </div>
-        <ul class="nav-menu">
-            <li><a href="index.html">Inicio</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
 
-    <!-- Portada -->
+    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <img src="img/galeria/galeriaround2/doj_logo.png" alt="DOJ Logo" class="hero-logo">
             <h1>Departamento de Justicia</h1>
             <p class="motto">Qui pro Domina Justitia Sequitur</p>
         </div>
-        <div class="scroll-arrow"></div>
     </header>
 
-    <section class="carousel-section">
-        <div class="section-title">
-            <h2>Galería DOJ</h2>
-            <p>Conoce nuestras instalaciones y equipo</p>
-        </div>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-track"></div>
-                <button class="carousel-button prev" id="prevBtn">&lt;</button>
-                <button class="carousel-button next" id="nextBtn">&gt;</button>
+    <!-- Descripción del DOJ -->
+    <section class="doj-description">
+        <div class="description-container">
+            <div class="description-content">
+                <h2>¿Qué es el Departamento de Justicia?</h2>
+                <p>El Departamento de Justicia de Los Santos es la institución encargada de garantizar la aplicación imparcial de la ley, proteger los derechos de todos los ciudadanos y mantener la integridad del sistema judicial en nuestro estado. Nos comprometemos a servir con justicia, transparencia y profesionalismo, asegurando que cada caso sea tratado con el máximo rigor y respeto a los principios legales.</p>
+                <p>Nuestro lema "Qui pro Domina Justitia Sequitur" refleja nuestro compromiso inquebrantable con la aplicación justa de la ley y el servicio a la comunidad de Los Santos.</p>
             </div>
         </div>
     </section>
 
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <i class="icon-phone"></i>
-                <div class="stat-info">
-                    <h2>2412</h2>
-                    <p>Avisos respondidos</p>
+    <!-- Sección de Licencias -->
+    <section class="licenses-section">
+        <div class="licenses-container">
+            <div class="licenses-header">
+                <h2>Licencias del Departamento de Justicia</h2>
+                <p class="licenses-intro">Las siguientes licencias son las que están tramitadas por parte del Departamento de Justicia. Para obtenerlas es necesario pasar por una pequeña entrevista encargada por los agentes del DOJ y/o, en su defecto en algunos casos, una breve revisión de instalaciones para la correcta realización de una actividad en concreto.</p>
+            </div>
+
+            <div class="licenses-types">
+                <!-- Licencias Individuales -->
+                <div class="license-category">
+                    <div class="category-header">
+                        <div class="category-icon individual">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Licencias Individuales</h3>
+                        <p class="category-subtitle">Para personas físicas</p>
+                    </div>
+                    <div class="license-list">
+                        <div class="license-item">
+                            <div class="license-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="license-info">
+                                <h4>Licencia de Seguridad Privada</h4>
+                                <p>Autorización para ejercer actividades de seguridad privada</p>
+                            </div>
+                        </div>
+                        <div class="license-item">
+                            <div class="license-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="license-info">
+                                <h4>Licencia de Investigación Privada</h4>
+                                <p>Permiso para realizar investigaciones privadas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Licencias de Establecimiento -->
+                <div class="license-category">
+                    <div class="category-header">
+                        <div class="category-icon establishment">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Licencias de Establecimiento</h3>
+                        <p class="category-subtitle">Para comercios y clínicas</p>
+                    </div>
+                    <div class="license-list">
+                        <div class="license-item">
+                            <div class="license-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <div class="license-info">
+                                <h4>Licencia de Clínica Privada</h4>
+                                <p>Autorización para operar instalaciones médicas privadas</p>
+                            </div>
+                        </div>
+                        <div class="license-item">
+                            <div class="license-icon">
+                                <i class="fas fa-cocktail"></i>
+                            </div>
+                            <div class="license-info">
+                                <h4>Licencia de Establecimiento de Ocio Nocturno</h4>
+                                <p>Permiso para operar locales de entretenimiento nocturno</p>
+                            </div>
+                        </div>
+                        <div class="license-item">
+                            <div class="license-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="license-info">
+                                <h4>Licencia de Restaurante de Alimentación</h4>
+                                <p>Autorización para operar establecimientos de restauración</p>
+                            </div>
+                        </div>
+                        <div class="license-item">
+                            <div class="license-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="license-info">
+                                <h4>Licencia de Taller Mecánico</h4>
+                                <p>Permiso para operar talleres de reparación vehicular</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="stat-item">
-                <i class="icon-person"></i>
-                <div class="stat-info">
-                    <h2>918</h2>
-                    <p>Residentes servidos</p>
+
+            <!-- Información importante -->
+            <div class="license-notice">
+                <div class="notice-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="notice-content">
+                    <h4>Información Importante</h4>
+                    <p>Cualquier establecimiento <strong>NO incluido</strong> dentro de estas licencias está <strong>EXENTO</strong> de las mismas, y puede ejercer libremente la actividad laboral.</p>
+                    <p>En caso de que se incluyan nuevas licencias, el establecimiento que estaba ejerciendo dicha actividad tendrá un total de <strong>TREINTA (30) días</strong> para obtenerla desde la notificación del cambio.</p>
                 </div>
             </div>
-            <div class="stat-item">
-                <i class="icon-card"></i>
-                <div class="stat-info">
-                    <h2>12</h2>
-                    <p>Voluntarios civiles</p>
-                </div>
-            </div>
-            <div class="stat-item">
-                <i class="icon-graduation"></i>
-                <div class="stat-info">
-                    <h2>83</h2>
-                    <p>Graduados del programa de cadetes</p>
-                </div>
+
+            <!-- Botón de solicitud -->
+            <div class="license-cta">
+                <a href="https://forms.google.com/your-form-link" target="_blank" class="license-button">
+                    <i class="fas fa-file-alt button-icon"></i>
+                    <span class="button-text">Solicitar Licencia</span>
+                    <i class="fas fa-arrow-right button-arrow"></i>
+                </a>
             </div>
         </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-text">
-                <h2>Sobre Nosotros</h2>
-                <p class="mission">El Departamento de Justicia de Los Santos tiene como misión garantizar la aplicación imparcial de la ley, proteger los derechos de todos los ciudadanos y mantener la integridad del sistema judicial. Nos comprometemos a servir con justicia, transparencia y profesionalismo, asegurando que cada caso sea tratado con el máximo rigor y respeto a los principios legales.</p>
-                <p class="motto-description">Nuestro lema "Justicia, Integridad y Servicio" refleja nuestro compromiso inquebrantable con la aplicación justa de la ley. Todos los miembros del DOJ trabajan incansablemente para garantizar que la justicia prevalezca en cada situación, manteniendo los más altos estándares éticos y profesionales en el cumplimiento de nuestro deber.</p>
-            </div>
-            <div class="video-container">
-                <iframe 
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/f7Ct7YtIIwA?enablejsapi=1&origin=*"
-                    title="Video promocional DOJ" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lema -->
-    <section class="motto-section">
-        <p class="motto-text">Qui pro Domina Justitia Sequitur</p>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 Grupo Oasis. Todos los derechos reservados.</p>
+        <p>© 2025 Departamento de Justicia de Los Santos. Todos los derechos reservados.</p>
     </footer>
 
     <script src="app.js"></script>

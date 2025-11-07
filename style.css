@@ -2,11 +2,13 @@
     --dark-blue: #032d70;
     --light-blue: #0542a8;
     --white: #ffffff;
-    --cream: #fefefe;
+    --cream: #f5f7fa;
     --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     --medium-blue: #1a4a8a;
-    --light-gray: #f5f5f5;
-    --dark-text: #333;
+    --light-gray: #e8ecf1;
+    --dark-text: #2c3e50;
+    --gold: #ba9450;
+    --light-bg: #f8f9fb;
 }
 
 * {
@@ -16,9 +18,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: var(--cream);
+    color: var(--dark-text);
 }
 
 /* Navbar mejorado */
@@ -666,8 +669,9 @@ body {
     background-color: #032d70;
     color: var(--white);
     text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.9rem;
+    padding: 2rem 0;
+    font-size: 0.95rem;
+    margin-top: 4rem;
 }
 
 /* Banner mejorado */
@@ -1831,16 +1835,11 @@ body {
     background-position: center;
 }
 
-.location-icon {
-    /* Sin imagen */
-}
-
-.staff-icon {
-    /* Sin imagen */
-}
-
+.location-icon,
+.staff-icon,
 .service-icon {
-    /* Sin imagen */
+    /* Iconos sin imagen - se pueden añadir más tarde */
+    display: inline-block;
 }
 
 .detail-text {
@@ -3505,5 +3504,475 @@ body {
     
     .group-photo-caption p {
         font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   NUEVOS ESTILOS PARA EL DOJ
+   ============================================ */
+
+/* Sección de Descripción del DOJ */
+.doj-description {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--cream) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.doj-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(186, 148, 80, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(3, 45, 112, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.description-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.description-content {
+    background: var(--white);
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid var(--gold);
+    transition: all 0.3s ease;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.description-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.description-content h2 {
+    color: var(--dark-blue);
+    font-size: 2.2rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.description-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+.description-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--dark-text);
+    margin-bottom: 1.2rem;
+}
+
+.description-content p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--medium-blue);
+    font-size: 1rem;
+}
+
+/* Sección de Licencias */
+.licenses-section {
+    padding: 5rem 2rem;
+    background: var(--cream);
+    position: relative;
+}
+
+.licenses-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.licenses-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.licenses-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.2rem;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.licenses-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+.licenses-intro {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--dark-text);
+    background: var(--white);
+    padding: 1.8rem 2.2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Tipos de Licencias */
+.licenses-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+
+.license-category {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.license-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(186, 148, 80, 0.2);
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.category-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    background: var(--white);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.category-icon.individual {
+    background: linear-gradient(135deg, rgba(3, 45, 112, 0.1), rgba(186, 148, 80, 0.1));
+}
+
+.category-icon.establishment {
+    background: linear-gradient(135deg, rgba(186, 148, 80, 0.1), rgba(3, 45, 112, 0.1));
+}
+
+.license-category:hover .category-icon {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.category-icon i {
+    display: block;
+}
+
+.category-header h3 {
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.category-subtitle {
+    color: var(--medium-blue);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.license-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+.license-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.3rem;
+    background: var(--light-bg);
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.license-item:hover {
+    background: var(--white);
+    border-color: rgba(186, 148, 80, 0.3);
+    transform: translateX(5px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.license-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.license-icon i {
+    display: block;
+}
+
+.license-item:hover .license-icon {
+    transform: translateY(-2px);
+    background: var(--light-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: var(--gold);
+}
+
+.license-info {
+    flex: 1;
+}
+
+.license-info h4 {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.license-info p {
+    color: var(--dark-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Aviso de Licencias */
+.license-notice {
+    background: var(--white);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.notice-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.notice-icon i {
+    display: block;
+}
+
+.notice-content h4 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.notice-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-text);
+    margin-bottom: 0.9rem;
+}
+
+.notice-content p:last-child {
+    margin-bottom: 0;
+}
+
+.notice-content strong {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+/* Botón de Solicitud */
+.license-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.license-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    background: var(--dark-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(3, 45, 112, 0.2);
+    border: none;
+}
+
+.license-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(3, 45, 112, 0.3);
+    background: var(--medium-blue);
+}
+
+.button-icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.license-button:hover .button-icon {
+    transform: translateX(-2px);
+}
+
+.button-text {
+    position: relative;
+}
+
+.button-arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.license-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.description-content,
+.license-category,
+.license-notice {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .licenses-types {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .doj-description {
+        padding: 3rem 1.5rem;
+    }
+
+    .description-content {
+        padding: 2rem;
+    }
+
+    .description-content h2 {
+        font-size: 2rem;
+    }
+
+    .description-content p {
+        font-size: 1rem;
+    }
+
+    .licenses-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .licenses-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .licenses-intro {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+
+    .license-category {
+        padding: 2rem;
+    }
+
+    .category-header h3 {
+        font-size: 1.6rem;
+    }
+
+    .license-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .license-icon {
+        margin: 0 auto;
+    }
+
+    .license-notice {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .license-button {
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
     }
 }
