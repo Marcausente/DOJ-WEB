@@ -11,9 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
             body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
 
-        // Cerrar el menú al hacer clic en un enlace
+        // Cerrar el menú al hacer clic en un enlace y scroll suave
         document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                
+                // Si es un enlace de ancla, hacer scroll suave
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offset = 70; // Altura del navbar
+                        const targetPosition = targetElement.offsetTop - offset;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                
+                // Cerrar el menú móvil
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 body.style.overflow = 'auto';

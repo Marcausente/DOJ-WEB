@@ -3517,6 +3517,7 @@ body {
     background: linear-gradient(135deg, var(--light-bg) 0%, var(--cream) 100%);
     position: relative;
     overflow: hidden;
+    scroll-margin-top: 70px;
 }
 
 .doj-description::before {
@@ -3593,6 +3594,7 @@ body {
     padding: 5rem 2rem;
     background: var(--cream);
     position: relative;
+    scroll-margin-top: 70px;
 }
 
 .licenses-container {
