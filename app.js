@@ -24,17 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Código del carrusel (solo se ejecuta si existe el elemento)
     const track = document.querySelector('.carousel-track');
     if (track) {
-        const images = [
-            'img/Grupal.png',
-            'img/oficina.png',
-            'img/carcel.png',
-            'img/atril.png',
-            'img/barco.png',
-            'img/caninos.png',
-            'img/oficina2.png',
-            'img/entrenamiento.png',
-            'img/carcel2.png'
-        ];
+        const images = [];
 
         let currentIndex = 0;
 
