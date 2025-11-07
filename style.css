@@ -182,13 +182,13 @@ body {
 .hero h1 {
     font-size: 2.5rem;
     margin: 1.5rem 0;
-    color: var(--white);
+    color: #ba9450;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .motto {
     font-size: 1.3rem;
-    color: var(--white);
+    color: #ba9450;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
@@ -997,7 +997,7 @@ body {
 }
 
 .motto-text {
-    color: var(--dark-blue);
+    color: #ba9450;
     font-size: 1.8rem;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
@@ -1102,7 +1102,7 @@ body {
 
 .motto-text {
     font-size: 1.5rem;
-    color: var(--dark-blue);
+    color: #ba9450;
     font-style: italic;
     opacity: 0.8;
     transition: all 0.3s ease;
