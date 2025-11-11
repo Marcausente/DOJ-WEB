@@ -167,11 +167,15 @@ document.addEventListener('DOMContentLoaded', () => {
         item.prepend(number);
     });
 
-    // Añadir funcionalidad de scroll suave para la flecha
-    document.querySelector('.scroll-arrow').addEventListener('click', function() {
-        const statsSection = document.querySelector('.stats');
-        statsSection.scrollIntoView({ behavior: 'smooth' });
-    });
+    // Añadir funcionalidad de scroll suave para la flecha (si existe)
+    const scrollArrow = document.querySelector('.scroll-arrow');
+    if (scrollArrow) {
+        scrollArrow.addEventListener('click', function() {
+            const statsSection = document.querySelector('.stats');
+            const nextTarget = statsSection || document.getElementById('doj-description');
+            if (nextTarget) nextTarget.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 
     // Mejoras para el carrusel
     const carousel = document.querySelector('.carousel');
