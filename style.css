@@ -4100,3 +4100,304 @@ body {
         justify-content: center;
     }
 }
+
+/* ============================================
+   SECCIÓN DE DENUNCIAS
+   ============================================ */
+
+.complaints-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--light-bg) 100%);
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: 70px;
+}
+
+.complaints-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(186, 148, 80, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(3, 45, 112, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.complaints-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.complaints-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    background: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid var(--gold);
+}
+
+.complaints-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    background: linear-gradient(135deg, rgba(3, 45, 112, 0.1), rgba(186, 148, 80, 0.1));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.complaints-header:hover .complaints-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.complaints-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.complaints-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+.complaints-intro {
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--dark-text);
+}
+
+.complaints-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(186, 148, 80, 0.3);
+}
+
+.info-item-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(3, 45, 112, 0.1), rgba(186, 148, 80, 0.1));
+    border-radius: 12px;
+    color: var(--dark-blue);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover .info-item-icon {
+    transform: scale(1.1);
+    background: var(--gold);
+    color: var(--white);
+}
+
+.info-item-content h4 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.info-item-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-text);
+    margin: 0;
+}
+
+.complaints-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.complaints-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 3rem;
+    background: var(--dark-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(3, 45, 112, 0.3);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.complaints-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.complaints-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(3, 45, 112, 0.4);
+    background: var(--medium-blue);
+}
+
+.complaints-button:hover::before {
+    left: 100%;
+}
+
+.complaints-button .button-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.complaints-button:hover .button-icon {
+    transform: rotate(360deg);
+}
+
+.complaints-button .button-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.complaints-button:hover .button-arrow {
+    transform: translateX(8px);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.complaints-header,
+.info-item {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.info-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.info-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.info-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .complaints-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .complaints-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .complaints-header h2 {
+        font-size: 2rem;
+    }
+
+    .complaints-intro {
+        font-size: 1rem;
+    }
+
+    .complaints-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .info-item-icon {
+        margin: 0 auto;
+    }
+
+    .complaints-button {
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .complaints-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .complaints-intro {
+        font-size: 0.95rem;
+    }
+
+    .info-item-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .info-item-content p {
+        font-size: 0.9rem;
+    }
+}
