@@ -123,17 +123,21 @@ body {
 
 /* Hero Section mejorado */
 .hero {
-    background-image: url('img/galeria/galeriaround2/portada2.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+	background-image: url('img/galeria/galeriaround2/portada2.png');
+	background-size: cover;
+	background-position: center;
+	/* Altura estable restando la navbar (57px) */
+	height: calc(100vh - 57px);
+	height: calc(100svh - 57px);
+	height: calc(100dvh - 57px);
     min-height: 400px;
-    padding: 2rem;
+	padding: 2rem;
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -57px;
-    padding-top: calc(2rem + 57px);
+	/* Evitar reflujo por sticky navbar */
+	margin-top: 0;
+	padding-top: 2rem;
 }
 
 .hero::before {
@@ -152,8 +156,10 @@ body {
     color: var(--white);
     width: 100%;
     padding: 0 1rem;
-    animation: fadeIn 1.5s ease-out;
-    transform: translateY(-5%);
+	/* Evitar saltos por animaciones iniciales */
+	animation: none;
+	transform: none;
+	top: -2vh; /* Elevar ligeramente el contenido en la portada */
 }
 
 /* Animación de flotación para el logo */
@@ -167,6 +173,71 @@ body {
     100% {
         transform: translateY(0);
     }
+}
+
+/* ================================
+   Consitucio: visor de documento
+   ================================ */
+.doc-embed {
+	padding: 2rem 0 4rem;
+	background: var(--cream);
+}
+
+.doc-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.doc-frame {
+	width: 100%;
+	height: 85vh;
+	border: 0;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+	.doc-frame {
+		height: 70vh;
+	}
+}
+
+/* Acciones del documento (botón abrir en Drive) */
+.doc-actions {
+	text-align: center;
+	padding: 1.2rem 1rem 0;
+	background: var(--cream);
+}
+
+/* ================================
+   Modo más sobrio (menos IA-vibes)
+   ================================ */
+/* Reducir animaciones y transformaciones exageradas en elementos clave */
+.hero-logo {
+	animation: none;
+}
+
+.hero-logo:hover {
+	transform: none;
+	filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+}
+
+.nav-menu a:hover {
+	text-shadow: none;
+	transform: none;
+}
+
+/* Limitar “brincos” en tarjetas y bloques */
+.license-category:hover,
+.license-item:hover,
+.gallery-item:hover,
+.agent-card:hover,
+.rank-item:hover,
+.promo-image:hover,
+.carousel:hover {
+	transform: none;
 }
 
 .hero-logo {
@@ -1168,6 +1239,25 @@ body {
     .motto {
         font-size: 2rem;
     }
+}
+
+/* Ajustes específicos para portátiles (<=1366px) */
+@media (max-width: 1366px) {
+	.hero-content {
+		top: -3vh;
+	}
+
+	.hero-logo {
+		width: 280px;
+	}
+
+	.hero h1 {
+		font-size: 2.6rem;
+	}
+
+	.motto {
+		font-size: 1.2rem;
+	}
 }
 
 /* Sección de categorías de información */
@@ -4011,6 +4101,13 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Bloque centrado para categorías sueltas de licencias */
+.licenses-single {
+	max-width: 760px;
+	margin: 2rem auto 0;
+	padding: 0 1rem;
 }
 
 .description-content,
